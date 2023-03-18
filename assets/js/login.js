@@ -17,11 +17,9 @@ $(function () {
 
     });
 
-
+  
     // 显示隐藏密码事件
     let em = document.querySelectorAll(".layui-form-item .pwd_show_or_hide")
-
-
     $(em).click(function (e) {
         e.preventDefault();
 
@@ -33,24 +31,6 @@ $(function () {
         }
 
     });
-
-    // $(em[0]).click(function (e) {
-    //     e.preventDefault();
-
-    //     $(em[0]).hide()
-    //     $("input[name=password]").attr("type", "text")
-    //     $("input[name=title]").attr("type", "text")
-    //     $(em[1]).show()
-    // });
-
-    // $(em[1]).click(function (e) {
-    //     e.preventDefault();
-    //     $("input[name=password]").attr("type", "password")
-    //     $("input[name=title]").attr("type", "password")
-    //     $(em[1]).hide()
-    //     $(em[0]).show()
-    // });
-
 
 
     // 用于定义自定义表单匹配规则
@@ -137,12 +117,15 @@ $(function () {
                 else {
                     layer.msg("登录成功")
                     localStorage.setItem("token", response.token)
+                    window.open(" http://127.0.0.1:5500/index.html")
                     // console.log(response);
 
                 }
             }
         });
     });
+
+    
 })
 
 
